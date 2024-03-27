@@ -4,6 +4,7 @@
     <title>Snearkers Feet</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="./Assets/css/style.css"> 
+    <script src="./Assets/js/index.js" defer></script>
 </head>
 <body>
     <div class="div-1">
@@ -70,26 +71,17 @@
         </div>
 
         <div class="dv-questionario">
-            <form action="">
+            <form id="form" action="">
+               
                 <div>
-                    <label>Nome: </label>
-                    <input type="text"/>
-                </div>
-
-                <div>
-                    <label>E-mail: </label>
-                    <input type="text"/>
-                </div>
-
-                <div>
-                    <label>Telefone: </label>
-                    <input type="text"/>
+                    <label>Valor pago: </label>
+                    <input value="0" min="0" id="jsVlPago" type="number"/>
                 </div>
 
                 <div>
                     <label>Marca:</label>
-                    <select>
-                        <option>Nike</option>
+                    <select id="marca">
+                        <option selected>Nike</option>
                         <option>Adidas</option>
                         <option>Puma</option>
                         <option>Yeezy</option>
@@ -105,8 +97,8 @@
 
                 <div>
                     <label>Tecido:</label>
-                    <select>
-                        <option>Couro</option>
+                    <select id="tecido">
+                        <option selected>Couro</option>
                         <option>Camurça</option>
                         <option>Nobuck</option>
                         <option>Nylon</option>
@@ -118,12 +110,11 @@
 
                 <div>
                     <label>Tempo de uso: </label>
-                    <select>
-                        <option>6 meses</option>
-                        <option>6 meses a 1 ano</option>
-                        <option>1 ano a 2 anos</option>
-                        <option>2 anos a 3 anos</option>
-                        <option>Mais de 3 anos</option>
+                    <select id="tempUso">
+                        <option selected value="0">6 meses</option>
+                        <option value="1">6 meses a 1 ano</option>
+                        <option value="2">1 ano a 2 anos</option>
+                        <option value="3">Mais de 2 anos</option>
                     </select>
                 </div>
 
@@ -135,7 +126,7 @@
                     </div>
 
                     <div>
-                        <input type="radio" name="mancha" value="nao" id=""/>
+                        <input checked type="radio" name="mancha" value="nao" id=""/>
                         <label>Não</label>
                     </div>
                 </div>
@@ -148,18 +139,18 @@
                     </div>
 
                     <div>
-                        <input type="radio" name="rasgo" value="nao" id=""/>
+                        <input checked type="radio" name="rasgo" value="nao" id=""/>
                         <label>Não</label>
                     </div>
                 </div>
 
 
                 <div class="dv-btnorcamento">
-                    <button> Realizar orçamento</button>
+                    <button id="jsBtnOrcamento"> Realizar orçamento</button>
                 </div>
 
-                <div>
-                    <h4>R$00,00</h4>
+                <div class="dv-PrecoFinal">
+                    <output id="jsPrecoFinal">R$00,00</output>
                 </div>
             </form>
 

@@ -417,7 +417,7 @@ h4{
     }
 }
 
-input[type=text], select {
+input[type=text], input[type=number], input[type=email], input[type=tel], select {
     padding: .5rem;
     border: 1px solid gainsboro;
     border-radius: 5px;
@@ -473,4 +473,12 @@ input[type=text], select {
         }
       }
     }
+}
+
+.dv-PrecoFinal
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
